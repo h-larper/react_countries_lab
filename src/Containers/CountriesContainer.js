@@ -15,7 +15,7 @@ const CountriesContainer = () => {
     const updateVisitedCountries = (country) => {
         // take object and add to array of visited whilst keeping list
         console.log(country); 
-        setVisitedCountries([...visitedCountries, country])
+        setVisitedCountries([...visitedCountries, country]);
         // remove from original list
     };
 
