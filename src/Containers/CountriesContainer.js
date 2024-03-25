@@ -12,21 +12,22 @@ const CountriesContainer = () => {
         setCountries(jsonData);
     };
 
+    const updateVisitedCountries = (country) => {
+        // take object and add to array of visited whilst keeping list
+        console.log(country); 
+        setVisitedCountries([...visitedCountries, country])
+        // remove from original list
+    };
+
     useEffect(
         () => {
             loadCountries();
         }, []
     );
 
-    // useEffect(
-    //     () => {
-    //         console.log(`countries: ${JSON.stringify(countries)}`);
-    //     }, [countries]
-    // );
-
     return (  
         <>
-            <CountriesList countries={countries} visitedCountries={visitedCountries}/>
+            <CountriesList countries={countries} visitedCountries={visitedCountries} updateVisitedCountries={updateVisitedCountries}/>
         </>
     );
 }

@@ -1,10 +1,10 @@
-const Country = ({country}) => {
+const Country = ({country, updateVisitedCountries}) => {
     return ( 
         <>
             <li>
                 {country.name.common} {country.flag}
             </li>
-            <button> I've been there! 👋🏼 </button>
+            <button onClick={() => updateVisitedCountries(country)}> I've been there! 👋🏼 </button>
         </>
      );
 }
